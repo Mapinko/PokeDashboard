@@ -19,6 +19,16 @@ export const StyledHeader = styled.header`
          object-fit: cover;
       }
    }
+
+   @media (max-width: 600px) {
+      flex-direction: column-reverse;
+
+      .userMenu {
+         width: 100%;
+         justify-content: flex-end;
+      }
+   }
+
 `
 
 export const StyledHeaderForm = styled.form`
@@ -43,8 +53,17 @@ export const StyledHeaderForm = styled.form`
 
       border: none;
 
+      max-width: 373px;
+      width: 100%;
+
       &::placeholder {
          color: ${ ({ theme }) => theme.colors.white50 };
+      }
+   }
+
+   @media (max-width: 600px) {
+      input {
+         height: 52px;
       }
    }
 `
