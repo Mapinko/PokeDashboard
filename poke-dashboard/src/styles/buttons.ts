@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 
 interface iStyledButtonProps {
    buttonSize: 'lg' | 'md' | 'sm'
+   buttonStyle: 'solid' | 'outline
 }
 export const StyledButton = styled.button<iStyledButtonProps>`
    display: inline-flex;
@@ -31,6 +32,26 @@ export const StyledButton = styled.button<iStyledButtonProps>`
             padding:  0 1.5rem;
             height: 42px;
          `
+      }
+   } }
+
+   ${ ({ buttonStyle, theme }) => {
+      switch (buttonStyle) {
+         case 'solid':
+            return css`
+               background: ${ theme.colors.blue };
+               color: ${ theme.colors.white };
+            `
+         case 'outline':
+            return css`
+                  border: 1px solid ${ theme.colors.blue };
+                  background: transparent;
+                  color: ${ theme.colors.white };
+
+                  &:hover{
+                     background: ${ theme.colors.blue };
+                  }            
+               `
       }
    } }
 
