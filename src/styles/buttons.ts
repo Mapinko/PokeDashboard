@@ -13,6 +13,8 @@ export const StyledButton = styled.button<iStyledButtonProps>`
    font-family: 'Poppins', sans-serif;
    font-size: 17px;
 
+   border-radius: 12px;
+
    transition: .4s;
 
    ${ ({ buttonSize }) => {
