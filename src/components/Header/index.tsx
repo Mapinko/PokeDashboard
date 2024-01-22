@@ -6,15 +6,14 @@ const Header = () => {
    return (
       <StyledHeader>
          <StyledHeaderForm>
-            <button type='submit'>
-               <MdSearch size={ 30 } color='rgba(255, 255, 255, .5)' />
-               <input type="text" name="search" id="search" placeholder='Search' />
+            <button type="submit">
+               <MdSearch size={ 30 } />
             </button>
+            <input type="text" name="search" id="search" placeholder='Search...' />
          </StyledHeaderForm>
-
          <div className='userMenu'>
             <button>
-               <MdNotifications size={ 30 } color='#FFF' />
+               <MdNotifications size={ 30 } />
             </button>
             <img src={ Avatar } alt="User name" />
          </div>
