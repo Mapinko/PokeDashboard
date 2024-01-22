@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 interface iStyledButtonProps {
    buttonSize: 'lg' | 'md' | 'sm'
-   buttonStyle: 'solid' | 'outline
+   buttonStyle: 'solid' | 'outline'
 }
 export const StyledButton = styled.button<iStyledButtonProps>`
    display: inline-flex;
