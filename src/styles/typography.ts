@@ -5,7 +5,7 @@ export const StyledTitle = styled(BaseTitle)`
    font-family: 'Poppins', sans-serif;
    font-weight: ${ ({ fontWeight }) => fontWeight };
 
-   color: ${ ({ theme }) => theme.colors.white }
+   color: ${ ({ theme }) => theme.colors.white };
 
    ${ ({ fontSize }) => {
       switch (fontSize) {
@@ -28,6 +28,8 @@ export const StyledTitle = styled(BaseTitle)`
 interface iStyledParagraph {
    fontSize: "lg" | "md" | "sm"
    opacity?: number
+
+
 }
 
 export const StyledParagraph = styled.p<iStyledParagraph>`
@@ -59,3 +61,38 @@ export const StyledParagraph = styled.p<iStyledParagraph>`
       }
    } }
 `
+
+interface iStyledTag {
+   backgroundColor: "blue" | "red"
+}
+
+export const StyledTag = styled.span<iStyledTag>`
+   font-family: 'Poppins', sans-serif;
+   font-size: 20px;
+   font-weight: 400;
+
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+
+   height: 34px;
+   padding: 0 1.5rem;
+
+   color: ${ ({ theme }) => theme.colors.white };
+
+   border-radius: 6px;
+
+   ${ ({ backgroundColor, theme }) => {
+      switch (backgroundColor) {
+         case 'blue':
+            return css`
+                  background: ${ theme.colors.blue };
+               `
+         case 'red':
+            return css`
+                     background: ${ theme.colors.red };
+               `
+      }
+   } }
+
+   `
