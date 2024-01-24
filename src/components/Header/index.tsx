@@ -5,7 +5,7 @@ import { StyledHeader, StyledHeaderForm } from './style'
 const Header = () => {
    return (
       <StyledHeader>
-         <StyledHeaderForm>
+         <StyledHeaderForm >
             <button type="submit">
                <MdSearch size={ 30 } />
             </button>

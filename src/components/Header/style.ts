@@ -20,8 +20,8 @@ export const StyledHeader = styled.header`
       }
 
       button {
-         color: ${ ({ theme }) => theme.colors.white };
          transition: .4s;
+         color: ${ ({ theme }) => theme.colors.white };
 
          &:hover{
          color: ${ ({ theme }) => theme.colors.blue };
@@ -58,13 +58,16 @@ export const StyledHeaderForm = styled.form`
       color: ${ ({ theme }) => theme.colors.white };
       background: transparent;
       
-      border: none;
+      border: 0 none;
       width: 100%;
       max-width: 373px;
+      padding: 0.3rem .5rem;
 
       &::placeholder {
          color: ${ ({ theme }) => theme.colors.white50 };
+         background: transparent;
       }
+
    }
 
    button {
