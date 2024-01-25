@@ -16,9 +16,10 @@ export const StyledMenuList = styled.ul`
       padding: 1rem;
 
       transition: .4s;
+      
+      &:hover {
+         background-color: ${ ({ theme }) => theme.colors.blue };
+      }
    }
 
-   li:hover {
-      background-color: ${ ({ theme }) => theme.colors.blue };
-   }
 `

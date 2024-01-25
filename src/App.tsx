@@ -3,19 +3,19 @@ import Header from './components/Header'
 import MainBanner from './components/MainBanner'
 import Menu from './components/Menu'
 import MyGameList from './components/MyGameList'
-import { StyledMainWrapper } from './styles/global'
+import { StyledMainWrapper } from './styles/wrapper'
 
 function App () {
   return (
-    <div className="App">
+    <StyledMainWrapper>
       <Menu />
-      <StyledMainWrapper>
+      <div>
         <Header />
         <MainBanner />
         <GameList />
         <MyGameList />
-      </StyledMainWrapper>
-    </div>
+      </div>
+    </StyledMainWrapper>
   )
 }
 
