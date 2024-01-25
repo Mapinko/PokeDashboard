@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 
 
     body {
-        background-color: black;
+        background: radial-gradient(57.96% 57.96% at 51.56% 38.81%, #480505 6.53%, #000000 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
 
         scroll-behavior: smooth;
         /* overflow-y: auto; */

@@ -8,7 +8,7 @@ interface iMyGameCardProps {
 }
 
 
-const MyGameCard = ({ game }: iMyGameCardProps) => {
+export const MyGameCard = ({ game }: iMyGameCardProps) => {
    return (
       <StyledMyGameCard>
          <div className='left'>
@@ -43,5 +43,3 @@ const MyGameCard = ({ game }: iMyGameCardProps) => {
       </StyledMyGameCard>
    )
 }
-
-export default MyGameCard

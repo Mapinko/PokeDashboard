@@ -5,4 +5,5 @@ export const StyledMyGameListHeader = styled.header`
    align-items: center;
    justify-content: space-between;
    gap: 1rem;
+
 `

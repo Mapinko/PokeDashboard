@@ -11,7 +11,7 @@ export const StyledMyGameCard = styled.li`
       display: flex;
       align-items: center;
       gap: 1.5rem;
-      margin-top: 20px;
+      
       img {
          width: 85px;
          height: 85px;
