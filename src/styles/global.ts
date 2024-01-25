@@ -1,16 +1,34 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
-
-    body {
-        background-color: black;
-    }
-    
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     } 
+
+
+    body {
+        background-color: black;
+
+        scroll-behavior: smooth;
+        /* overflow-y: auto; */
+    }
+    
+    /* Estilizando a barra de rolagem no Chrome e Safari */
+    body::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color: black;
+    }
+
+    /* Estilizando a barra de rolagem no Firefox */
+    body {
+        scrollbar-width: thin;
+        scrollbar-color: black;
+    }
 
     button {
         cursor: pointer;
@@ -26,6 +44,12 @@ export const GlobalStyle = createGlobalStyle`
     li {
         list-style: 0;
     }
+
+    img{
+        max-width: 100%;
+    }
+
+
 `
 
 export const ColorsTheme = {

@@ -1,18 +1,21 @@
-import { gameData } from '../../data/database'
-import GameCard from '../GameCard'
+import { gameData } from "../../data/database"
+import GameCard from "./GameCard"
+import GameListHeader from "./GameListHeader"
+import { StyledGameList } from "./style"
 
 const GameList = () => {
-
    const newGameData = [...gameData]
-
    newGameData.length = 3
 
    return (
-      <ul>
-         { newGameData.map(game => (
-            <GameCard game={ game } />
-         )) }
-      </ul>
+      <section>
+         <GameListHeader />
+         <StyledGameList>
+            { newGameData.map((game) => (
+               <GameCard game={ game } />
+            )) }
+         </StyledGameList>
+      </section>
    )
 }
 
