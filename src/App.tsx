@@ -9,7 +9,7 @@ function App () {
   return (
     <StyledMainWrapper>
       <Menu />
-      <div>
+      <div className='main-content'>
         <Header />
         <MainBanner />
         <GameList />
