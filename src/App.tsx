@@ -1,6 +1,7 @@
 import GameList from './components/GameList'
 import Header from './components/Header'
 import MainBanner from './components/MainBanner'
+import MyGameList from './components/MyGameList'
 
 function App () {
   return (
@@ -8,6 +9,7 @@ function App () {
       <Header />
       <MainBanner />
       <GameList />
+      <MyGameList />
     </div>
   )
 }

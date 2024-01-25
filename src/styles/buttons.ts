@@ -62,3 +62,22 @@ export const StyledButton = styled.button<iStyledButtonProps>`
       box-shadow: 0px 4px 25px rgba(255, 249, 249, 0.25);
    }
 `
+
+export const StyledIconLink = styled.button`
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+
+   width: 35px;
+   min-width: 35px;
+   height: 35px;
+
+   color: ${ ({ theme }) => theme.colors.white };
+   transition: .4s;
+   opacity: .5;
+
+   &:hover{
+      opacity: 1;
+   }
+
+`

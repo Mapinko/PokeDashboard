@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import BaseTitle from './components/typography'
+import BaseTitle from "./components/typography"
 
 export const StyledTitle = styled(BaseTitle)`
    font-family: 'Poppins', sans-serif;
@@ -11,31 +11,33 @@ export const StyledTitle = styled(BaseTitle)`
       switch (fontSize) {
          case "lg":
             return css`
-               font-size: 44px;
-               @media (max-width: 800px) {
-                  font-size: 36px;
-               }
-               @media (max-width: 420px) {
-                  font-size: 32px;
-               }
-            `
+                  font-size: 44px;
+                  @media (max-width: 800px){
+                     font-size: 36px;
+                  }
+                  @media (max-width: 420px){
+                     font-size: 32px;
+                  }
+               `
+         case "slg":
+            return css`
+                  font-size: 24px;
+               `
          case "md":
             return css`
-               font-size: 20px;
-            `
+                  font-size: 20px;
+               `
          case "sm":
             return css`
-                        font-size: 16px;
-                     `
+                  font-size: 16px;
+               `
       }
    } }
 `
 
 interface iStyledParagraph {
-   fontSize: "lg" | "md" | "sm"
    opacity?: number
-
-
+   fontSize: "sm" | "md" | "lg"
 }
 
 export const StyledParagraph = styled.p<iStyledParagraph>`
@@ -66,6 +68,8 @@ export const StyledParagraph = styled.p<iStyledParagraph>`
                `
       }
    } }
+
+   
 `
 
 interface iStyledTag {
@@ -82,6 +86,7 @@ export const StyledTag = styled.span<iStyledTag>`
    justify-content: center;
 
    height: 34px;
+
    padding: 0 1.5rem;
 
    color: ${ ({ theme }) => theme.colors.white };
@@ -96,9 +101,8 @@ export const StyledTag = styled.span<iStyledTag>`
                `
          case 'red':
             return css`
-                     background: ${ theme.colors.red };
+                  background: ${ theme.colors.red };
                `
       }
    } }
-
-   `
+`
